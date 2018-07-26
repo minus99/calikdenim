@@ -28,11 +28,16 @@ $(document).ready(function () {
 
     $(".profile-area > .search").bind("click", function () {
         $(".profile-area > .profile").addClass("hide");
+        $(".profile-area > .search").addClass("fix");
         $(".search-div").addClass("active");
+
+        $("body").addClass("hidden");
     });
 
     $(".search-div .search-input > .back").bind("click", function(){
         $(".profile-area > .profile").removeClass("hide");
+        $(".profile-area > .search").removeClass("fix");
         $(".search-div").removeClass("active");
+        $("body").removeClass("hidden");
     });
 });

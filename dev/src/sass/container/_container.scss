@@ -1,6 +1,9 @@
 html,
 body {
     height: 100%;
+    &.hidden{
+        overflow: hidden;
+    }
 }
 
 body {
@@ -122,6 +125,10 @@ body {
                     padding: 0;
                     opacity: 0;
                 }
+                &.fix {
+                    position: fixed;
+                    top: 0;
+                }
             }
         }
     }
@@ -167,6 +174,21 @@ body {
         &.active {
             bottom: 0;
             background: white;
+        }
+        .social-media {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            .social {
+                text-decoration: none;
+                font-size: 21px;
+                color: black;
+                padding: 7px 14px;
+                border-left: solid 1px rgb(239, 239, 239);
+                &:first-child {
+                    border-left: none;
+                }
+            }
         }
     }
     .search-div {
@@ -219,6 +241,7 @@ body {
                 margin: 0;
                 padding: 10px 0;
                 list-style-type: none;
+                height: 100%;
                 li {
                     a {
                         text-decoration: none;
@@ -228,20 +251,20 @@ body {
                         padding: 12px 0 12px 28px;
                         b {}
                     }
-                    &.clear{
+                    &.clear {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
                         padding-left: 28px;
                         font-size: 14px;
                         letter-spacing: 0.8px;
-                        .head{
+                        .head {
                             font-weight: bold;
                         }
-                        .delete{
+                        .delete {
                             color: black;
                             font-weight: normal;
-                            span{
+                            span {
                                 color: $color-blue-two;
                             }
                         }
