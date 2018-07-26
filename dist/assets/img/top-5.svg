@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="149" height="82" viewBox="0 0 149 82">
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#000" stroke-linecap="square" stroke-width="2" d="M2 81h146M2 3l98 .5"/>
+        <text fill="#000" font-family="PlayfairDisplay-Regular, Playfair Display" font-size="54" letter-spacing="-.238" transform="translate(-1 2)">
+            <tspan x="0" y="87">TO</tspan> <tspan x="72.667" y="87" letter-spacing="-.257">P</tspan>
+        </text>
+        <text fill="#000" font-family="PlayfairDisplay-Regular, Playfair Display" font-size="16" letter-spacing=".57" transform="translate(-1 2)">
+            <tspan x="8" y="69">Fit Trend</tspan> <tspan x="84.145" y="69">s</tspan>
+        </text>
+        <text fill="#000" font-family="PlayfairDisplay-SemiBold, Playfair Display" font-size="100" font-weight="500" letter-spacing="1.364" transform="translate(-1 2)">
+            <tspan x="104" y="155">5</tspan>
+        </text>
+    </g>
+</svg>

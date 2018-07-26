@@ -1,0 +1,38 @@
+.going-list {
+    padding: 0 20px 20px;
+    > h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: .3px;
+        text-align: center;
+        padding: 10px 20px;
+    }
+    .item {
+        width: 100%;
+        margin-bottom: 25px;
+        .img {
+            width: 100%;
+            position: relative;
+            background: url("../img/example2.jpg") center center no-repeat;
+            background-size: cover;
+            &::before {
+                content: "";
+                display: block;
+                padding-top: 50%;
+            }
+        }
+        >h2{
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 0.5px;
+            margin: 10px 0;
+        }
+        > p{
+            font-size: 16px;
+            letter-spacing: 0.1px;
+            color: rgb(87, 89 ,92);
+            font-weight: 300;
+        }
+    }
+}

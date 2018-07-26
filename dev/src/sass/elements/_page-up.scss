@@ -1,0 +1,19 @@
+.page-up{
+    width: 29px;
+    height: 29px;
+    background-color: #2b63ea;
+    position: fixed;
+    right: 20px;
+    bottom: -69px;
+    text-align: center;
+    line-height: 31px;
+    font-size: 13px;
+    transition: all ease .2s;
+    &.active{
+        bottom: 20px;
+    }
+    span{
+        color: white;
+        text-align: center;
+    }
+}
