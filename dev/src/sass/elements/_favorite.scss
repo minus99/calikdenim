@@ -1,0 +1,12 @@
+.img-fav{
+    width: 180px;
+    height: 230px;
+    background: $color-blue-two;
+    .favorite-add{
+        width: 30px;
+        height: 30px;
+        float: right;
+        background: white;
+        cursor: pointer;
+    }
+}

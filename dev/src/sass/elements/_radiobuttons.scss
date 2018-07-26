@@ -1,0 +1,41 @@
+.radio-button{
+    display: inline-block;
+    .button{
+        width: 15px;
+        height: 15px;
+        border: solid 1px rgb(204,204,204);
+        border-radius: 50%;
+        position: relative;
+        float: left;
+        margin: 8px;
+        cursor: pointer;
+        &:after{
+            transition: all ease .1s;
+            z-index: 1;
+            content: "";
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            background: #2b63ea;
+            display: block;
+            border-radius: 50%;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        &:hover{
+            &:after{
+                width: 7px;
+                height: 7px;
+            }
+        }
+        &.active{
+            &:after{
+                width: 7px;
+                height: 7px;
+            }
+        }
+    }
+}

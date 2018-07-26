@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Berthold', serif;
+    .style-guide{
+        max-width: 850px;
+        margin: 20px auto;
+        width: calc(100% - 20px);
+    }
+}
+
+h1{
+    font-size: 26px;
+    letter-spacing: 0.8px;
+    line-height: 30px;
+}
+
+h2{
+    font-size: 26px;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+
+h3{
+    font-size: 22px;
+    letter-spacing: 0.3px;
+    line-height: 28px;
+}
+
+h4{
+    font-size: 20px;
+    letter-spacing: 0.3px;
+    line-height: 28px;
+}
+
+.tag-one{
+    font-size: 16px;
+    letter-spacing: 0.06px;
+    line-height: 24px;
+}
+.tag-two{
+    font-size: 14px;
+    letter-spacing: 0.06px;
+    line-height: 18px;
+}
+.tag-three{
+    font-size: 14px;
+    letter-spacing: 0.06px;
+    line-height: 16px;
+}
+.tag-four{
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    line-height: 16px;
+}
+.tag-five{
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+}
+
+.content-head{
+    h1{
+
+    }
+    p{
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.5px;
+        color: $color-black-one;
+        padding-left: 5px;
+        border-left: 4px solid $color-blue-two;
+    }
+}

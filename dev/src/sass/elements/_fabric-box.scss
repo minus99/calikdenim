@@ -1,0 +1,35 @@
+.fabrix-box{
+    width: calc(100% + 10px);
+    margin: 0 -5px;
+    flex-wrap: wrap;
+    display: flex;
+    > .box{
+        margin: 5px;
+        width: calc(25% - 10px);
+        border: solid 1px rgba(0, 0, 0, 0);
+        flex-grow: 1;
+        padding: 4px 5px;
+        text-align: center;
+        color: $color-blue-two;
+        transition: all ease .2s;
+        &:hover{
+            border: solid 1px $color-black-one;
+            cursor: pointer;
+        }
+        .in-img{
+            width: 100%;
+            height: 72px;
+            background: url('../img/example.jpg') center center no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .in-text{
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.3px;
+            text-align: center;
+            margin-top: 5px;
+            color: $color-black-one;
+        }
+    }
+}

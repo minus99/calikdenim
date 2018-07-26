@@ -1,0 +1,43 @@
+.button-white {
+    display: block;
+    height: 48px;
+    border: solid 1px $color-black-one;
+    background: white;
+    color: $color-black-one;
+    text-decoration: none;
+    text-align: center;
+    line-height: 46px;
+    transition: all ease .3s;
+    margin: 20px 0;
+    &:hover {
+        background: $color-black-one;
+        color: white;
+    }
+}
+
+.button-black {
+    display: block;
+    height: 48px;
+    border: solid 1px $color-black-one;
+    background: $color-black-one;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 46px;
+    transition: all ease .3s;
+    margin: 20px 0;
+    &:hover {
+        background: white;
+        color: $color-black-one;
+    }
+}
+
+.button-link {
+    text-decoration: underline;
+    color: $color-black-two;
+    font-size: 14px;
+    display: block;
+    letter-spacing: .8px;
+    text-align: center;
+    margin: 20px 0;
+}

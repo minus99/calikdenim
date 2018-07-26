@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calık Denim Components</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/fonts/stylesheet.css">    
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="close-area">
+                <div class="close">
+                        <span class="icon-close"></span>
+                </div>
+            </div>
+            <div class="logo-area">
+                <div class="logo">
+                    <img src="assets/img/logo.svg" alt="">
+                </div>
+                <div class="request" style="display: none;">Fill in your details to request invitation</div>
+            </div>
+        </div>
+        <div class="login-area">
+            <div class="image">
+                <img src="assets/img/login-image.jpg">
+            </div>
+            <div class="login">
+                <form>
+                    <div>
+                        <input type="text" name="emaila" class="inputText" autocomplete="off" required>
+                        <span class="floating-label">E-Mail</span>
+                    </div>
+                    <div>
+                        <input type="password" name="password" class="inputText passwordshow" autocomplete="off" required>
+                        <span class="floating-label">Password</span>
+                    </div>
+                </form>
+                <a href="#" class="button-black">Log In</a>
+                <a href="#" class="button-link">Forgotten your password?</a>
+                <a href="#" class="button-white request-invitation">Request Invitation</a>
+            </div>
+        </div>
+
+        <div class="request-area" style="display: none;">
+            <form>
+                <div>
+                    <input type="text" name="name" class="inputText" autocomplete="off" required>
+                    <span class="floating-label">Name *</span>
+                </div>
+                <div>
+                    <input type="text" name="surname" class="inputText" autocomplete="off" required>
+                    <span class="floating-label">Surname *</span>
+                </div>
+                <div>
+                    <input type="text" name="company" class="inputText" autocomplete="off" required>
+                    <span class="floating-label">Company *</span>
+                </div>
+                <div>
+                    <input type="text" name="position" class="inputText" autocomplete="off" required>
+                    <span class="floating-label">Positon</span>
+                </div>
+                <div>
+                    <input type="text" name="emailb" class="inputText" autocomplete="off" required>
+                    <span class="floating-label">E-Mail *</span>
+                </div>
+                <div>
+                    <input type="number" name="mobile" class="inputText" autocomplete="off" required>
+                    <span class="floating-label">Mobile</span>
+                </div>
+                <div class="accept-radio">
+                    <label class="radio-style">
+                        <a href="#">I accept the privacy policy <span class="icon-right"></span></a>
+                        <input type="radio" checked="checked">
+                        <span class="radiomark"></span>
+                    </label>
+                </div>
+            </form>
+            <a href="#" class="button-black">Apply</a>
+        </div>
+
+
+
+        
+    </div>
+    <script type="text/javascript" src="assets/js/vendor.js"></script>
+    <script type="text/javascript" src="assets/js/main.js" charset="utf-8"></script>
+</body>
+
+</html>

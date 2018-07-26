@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Berthold";
+    src: url("BertholdAkzidenzGroteskLight.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Berthold";
+    src: url("BertholdAkzidenzGroteskMedium.otf") format("opentype");
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Berthold";
+    src: url("BertholdAkzidenzGroteskRegular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'icomoon';
+    src:  url('iconmoon/icomoon.eot?lr3h6i');
+    src:  url('iconmoon/icomoon.eot?lr3h6i#iefix') format('embedded-opentype'),
+      url('iconmoon/icomoon.ttf?lr3h6i') format('truetype'),
+      url('iconmoon/icomoon.woff?lr3h6i') format('woff'),
+      url('iconmoon/icomoon.svg?lr3h6i#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,36 @@
+.category-button{
+    ul{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        border-top: solid 1px $color-black-three;
+        li{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border-bottom: solid 1px $color-black-three;
+            border-left: solid 1px $color-black-three;
+            border-right: solid 1px $color-black-three;
+            a{
+                display: block;
+                height: 50px;
+                font-size: 14px;
+                text-decoration: none;
+                font-size: 14px;
+                letter-spacing: .8px;
+                line-height: 50px;
+                padding-left: 18px;
+                transition: all ease .1s;
+                color: $color-black-two;
+                border-left: solid 0 $color-black-one;
+                &:hover{
+                    border-left: solid 4px $color-black-one;
+                    padding-left: 14px;
+                    color: $color-black-one;
+                }
+                
+            }
+        }
+    }
+}
