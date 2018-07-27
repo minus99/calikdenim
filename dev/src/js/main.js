@@ -41,6 +41,16 @@ $(document).ready(function () {
         $("body").removeClass("hidden");
     });
 
+    /* Trends Pop-up */
+    $(".trends > a.view-more").bind("click", function () {
+        $("body").addClass("hidden");
+        $(this).next().addClass("active");
+    });
+    $(".popup > a.close").bind("click", function () {
+        $("body").removeClass("hidden");
+        $(this).parent().removeClass("active");
+    });
+
 
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 'auto',
