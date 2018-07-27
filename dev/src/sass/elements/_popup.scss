@@ -1,0 +1,10 @@
+.popup{
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: fixed;
+    display: none;
+    &:target{
+        display: block;
+    }
+}

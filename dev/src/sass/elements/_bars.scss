@@ -1,0 +1,26 @@
+.bars {
+    padding: 10px 0;
+    display: none;
+    &.active{
+        display: block;
+    }
+    .bar {
+        margin-top: 15px;
+        .bg {
+            height: 13px;
+            background: rgb(240, 240, 240);
+            .color {
+                height: 100%;
+                width: 0;
+                background: $color-blue-two;
+            }
+        }
+        .text {
+            font-size: 12px;
+            letter-spacing: .5px;
+            line-height: 18px;
+            color: rgb(87, 89, 92);
+            margin: 5px 0px;
+        }
+    }
+}

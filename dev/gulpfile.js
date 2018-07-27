@@ -26,12 +26,8 @@ folder['js'] = folder['assets'] + '/js';
 // packages
 var VendorArray = {
 	'jsVendor': [
-		// jquery
-		// sweetalert2 
-		//'node_modules/sweetalert2/dist/sweetalert2.min.js',
-		// select2
-		//'node_modules/select2/dist/js/select2.full.min.js',
 		// bvalidator
+		// 'node_modules/sweetalert2/dist/sweetalert2.min.js'
 		//'node_modules/bvalidator/dist/jquery.bvalidator.min.js',
 		//'node_modules/bvalidator/dist/themes/presenters/default.min.js',
 		//'node_modules/bvalidator/dist/themes/gray/gray.js',
@@ -40,7 +36,8 @@ var VendorArray = {
 
 		'node_modules/jquery/dist/jquery.min.js',
 		'node_modules/select2/dist/js/select2.full.min.js',
-		'node_modules/swiper/dist/js/swiper.min.js'
+		'node_modules/swiper/dist/js/swiper.min.js',
+		
 	]
 };
 

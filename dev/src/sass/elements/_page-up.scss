@@ -9,6 +9,7 @@
     line-height: 31px;
     font-size: 13px;
     transition: all ease .2s;
+    cursor: pointer;
     &.active{
         bottom: 20px;
     }

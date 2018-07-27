@@ -52,9 +52,9 @@ $(document).ready(function () {
         var $this = $(this),
             $head = $('.page-up');
         if ($this.scrollTop() > 250) {
-           $head.addClass('active');
+            $head.addClass('active');
         } else {
-           $head.removeClass('active');
+            $head.removeClass('active');
         }
     });
 
@@ -67,3 +67,36 @@ $(document).ready(function () {
     });
 
 });
+
+
+
+
+
+/*  Select Bar Change  */
+$(".select-bar .select2").on("change", function (e) {
+    $(".select-bar .bars").removeClass("active");
+    $(".select-bar .bars .color").css("width", "0");
+    changeSelect($(this).val());
+});
+
+function changeSelect(e) {
+    $(".select-bar .bars").each(function () {
+        if ($(this).attr("optionvalue") === e) {
+            $(this).addClass("active");
+            barload();
+        }
+    });
+}
+
+function barload() {
+    $(".bars.active .bar").each(function () {
+        $(this).find(".color").animate({
+            width: $(this).find(".color").attr("rate") + "%"
+        }, 1000);
+    });
+}
+$(window).on('load', function () {
+    if ($(".bars.active .bar").length > 0) {
+        barload();
+    }
+})

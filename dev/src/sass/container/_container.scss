@@ -169,7 +169,7 @@ body {
                 display: flex;
                 align-items: center;
                 .icon-right {
-                    color: $color-blue-two;
+                    color: #2b63ea;
                     font-size: 18px;
                     margin: 0 10px;
                 }
@@ -246,7 +246,7 @@ body {
                 width: 28px;
                 height: 100%;
                 color: black;
-                line-height: 51px;
+                line-height: 54px;
             }
         }
         .search-list {
@@ -290,12 +290,15 @@ body {
             }
         }
     }
-    .select-bar {
+    .top-five {
         padding: 0 20px;
         .top-img {
             padding: 30px 0;
             justify-content: center;
             display: flex;
+        }
+        .select-bar{
+            margin: 10px 0 50px;
         }
         .trends {
             margin-bottom: 45px;
@@ -303,7 +306,6 @@ body {
                 background: url("../img/example2.jpg") center center no-repeat;
                 background-size: cover;
                 position: relative;
-                cursor: pointer;
                 width: 100%;
                 margin-top: 15px;
                 &::before {
