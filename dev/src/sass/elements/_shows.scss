@@ -1,0 +1,49 @@
+.starred-box {
+    overflow: hidden;
+    .in {
+        margin-right: -5px;
+        margin-left: -5px;
+        .item {
+            padding-right: 5px;
+            padding-left: 5px;
+            width: 50%;
+            float: left;
+            margin-bottom: 10px;
+            .img {
+                width: 100%;
+                position: relative;
+                background: url("../img/example2.jpg") center center no-repeat;
+                background-size: cover;
+                &::before {
+                    content: "";
+                    display: block;
+                    padding-top: 123%;
+                }
+                .close {
+                    width: 30px;
+                    height: 30px;
+                    color: white;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    text-decoration: none;
+                    text-align: center;
+                    span {
+                        text-align: center;
+                        line-height: 30px;
+                        font-size: 12px;
+                    }
+                }
+            }
+            span.text {
+                display: block;
+                font-size: 12px;
+                color: rgb(87, 89, 92);
+                font-weight: 300;
+                text-align: center;
+                margin: 10px;
+            }
+        }
+    }
+}

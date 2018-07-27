@@ -1,0 +1,30 @@
+.container {
+    .account-area {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            display: inline-block;
+            font-size: 14px;
+            letter-spacing: .8px;
+            text-decoration: none;
+            height: 40px;
+            line-height: 38px;
+            &.show {
+                color: black;
+                border: solid 1px black;
+                padding: 0 20px;
+            }
+            &.clear {
+                color: rgb(87, 89, 92);
+                font-weight: 300;
+                padding: 0 0 0 20px;
+                span {
+                    color: $color-blue-two;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}
