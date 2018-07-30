@@ -79,7 +79,44 @@ $(document).ready(function () {
 });
 
 
+/*  faq  start */
+$(".faq ul li .question").on("click", function (e) {
 
+    if($(this).parent().hasClass("not")){
+        $(".faq ul li").addClass("not");
+        $(".faq ul li").removeClass("active");
+    
+        $(this).parent().removeClass("not");
+        $(this).parent().addClass("active");
+    }
+    else{
+        $(this).parent().addClass("not");
+        $(this).parent().removeClass("active");
+    }
+
+    
+});
+
+/*  faq end */
+
+
+
+
+
+
+/*  Select Bar Change  */
+$(".account-area .select2").on("change", function (e) {
+    var date = $(this).val();
+    $(".request-box .item").each(function(){
+
+        console.log(date);
+        console.log($(this).attr("itemValue"));
+        $(this).addClass("none");
+        if($(this).attr("itemValue") === date){
+            $(this).removeClass("none");
+        }
+    });
+});
 
 
 /*  Select Bar Change  */

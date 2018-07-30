@@ -1,0 +1,46 @@
+.request-box {
+    border-top: solid 1px rgb(239, 239, 239);
+    .item {
+        &.none{
+            display: none;
+        }
+        border-bottom: solid 1px rgb(239, 239, 239);
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .detail{
+            display: flex;
+            align-items: center;
+            .img{
+                width: 80px;
+                background: url("../img/example2.jpg") center center no-repeat;
+                background-size: cover;
+                position: relative;
+                cursor: pointer;
+                &::before {
+                    content: "";
+                    display: block;
+                    padding-top: 63%;
+                }
+            }
+            .text{
+                padding: 0 14px;
+                span.name{
+                    font-size: 14px;
+                    display: block;
+                    font-weight: bold;
+                }
+                span.cat{
+                    font-size: 14px;
+                    display: block;
+                    letter-spacing: .5px;
+                }
+            }
+        }
+        .date{
+            font-size: 14px;
+            font-weight: 300;
+        }
+    }
+}

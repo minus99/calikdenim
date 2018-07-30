@@ -1,0 +1,128 @@
+.faq {
+    padding: 0 20px;
+    a.see-all {
+        font-size: 14px;
+        display: block;
+        text-align: center;
+        font-weight: 300;
+        text-decoration: none;
+        margin: 50px 0;
+        float: left;
+        width: 100%;
+        color: rgb(87, 89, 92);
+        span{
+            color: $color-blue-two;
+            font-size: 10px;
+        }
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-top: solid 1px rgb(239, 239, 239);
+        li {
+            border-bottom: solid 1px rgb(239, 239, 239);
+            float: left;
+            position: relative;
+            &::before {
+                width: calc(100% + 40px);
+                height: 100%;
+                background: rgba(0, 0, 0, 0.0);
+                position: absolute;
+                display: block;
+                content: "";
+                left: -20px;
+                transition: all ease .2s;
+                top: 0;
+                z-index: -1;
+            }
+            span.question {
+                cursor: pointer;
+                transition: all ease .2s;
+                font-size: 14px;
+                color: black;
+                letter-spacing: 0.5px;
+                line-height: 18px;
+                padding: 15px 0;
+                float: left;
+                width: 100%;
+                padding-left: 24px;
+                position: relative;
+                &:before {
+                    transition: all ease .2s;
+                    width: 14px;
+                    height: 2px;
+                    background: $color-blue-two;
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    margin: auto;
+                    top: 0;
+                    bottom: 0;
+                }
+                &:after {
+                    transition: all ease .2s;
+                    transform: rotate(90deg);
+                    width: 14px;
+                    height: 2px;
+                    background: $color-blue-two;
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    margin: auto;
+                    top: 0;
+                    bottom: 0;
+                }
+                >span {
+                    margin-right: 10px;
+                    color: $color-blue-two;
+                }
+            }
+            &.not {
+                &:hover {
+                    &::before {
+                        background: $color-blue-two;
+                    }
+                    span.question {
+                        color: white;
+                        &:before,
+                        &:after {
+                            background: white;
+                        }
+                    }
+                }
+            }
+            span.answer {
+                display: block;
+                overflow: hidden;
+                height: 0;
+                opacity: 0;
+                width: 100%;
+                letter-spacing: 0.5px;
+                padding-left: 24px;
+                line-height: 20px;
+                font-size: 14px;
+                font-weight: 300;
+                color: rgb(87, 89, 92);
+                transition: all ease .2s;
+            }
+            &.active {
+                &:before {
+                    background: rgb(248, 248, 248);
+                }
+                span.answer {
+                    opacity: 1;
+                    height: auto;
+                    padding-bottom: 18px;
+                }
+                span.question {
+                    &:after {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+        }
+    }
+}

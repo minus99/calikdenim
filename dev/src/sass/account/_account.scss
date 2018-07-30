@@ -26,5 +26,26 @@
                 }
             }
         }
+        .welcome {
+            width: 100%;
+            span.head {
+                display: block;
+                font-size: 24px;
+                letter-spacing: .3px;
+                text-align: center;
+                color: black;
+                margin: 15px 0 4px;
+                font-family: 'Playfair Display', serif;
+                font-weight: bold;
+            }
+            span.name {
+                display: block;
+                font-size: 14px;
+                letter-spacing: .5px;
+                text-align: center;
+                color: black;
+                margin: 4px 0 10px;
+            }
+        }
     }
 }

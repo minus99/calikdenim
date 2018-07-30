@@ -191,21 +191,6 @@ body {
             bottom: 0;
             background: white;
         }
-        .social-media {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-            .social {
-                text-decoration: none;
-                font-size: 21px;
-                color: black;
-                padding: 7px 14px;
-                border-left: solid 1px rgb(239, 239, 239);
-                &:first-child {
-                    border-left: none;
-                }
-            }
-        }
     }
     .search-div {
         width: 100%;
