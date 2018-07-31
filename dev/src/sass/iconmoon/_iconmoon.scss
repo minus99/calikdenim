@@ -13,6 +13,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-four:before {
+  content: "\e90a";
+}
+.icon-two:before {
+  content: "\e90b";
+}
 .icon-linkedin:before {
   content: "\e900";
 }
@@ -42,12 +48,6 @@
 }
 .icon-close:before {
   content: "\e909";
-}
-.icon-two:before {
-  content: "\e90a";
-}
-.icon-four:before {
-  content: "\e90b";
 }
 .icon-fill-right-bottom:before {
   content: "\e90c";

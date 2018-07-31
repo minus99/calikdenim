@@ -1,0 +1,34 @@
+.filters-top {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .filters {
+        cursor: pointer;
+        font-size: 14px;
+        letter-spacing: .8px;
+        color: #57595c;
+        width: 33%;
+        >span {
+            color: rgb(43, 99, 234);
+            font-size: 13px;
+            margin-left: 6px;
+        }
+    }
+    .items-size {
+        font-size: 14px;
+        letter-spacing: .8px;
+        color: #57595c;
+        width: 33%;
+        text-align: center;
+    }
+    .views {
+        cursor: pointer;
+        width: 33%;
+        text-align: right;
+        >span {
+            color: #2b63ea;
+            font-size: 7px;
+        }
+    }
+}
