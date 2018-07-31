@@ -83,3 +83,11 @@ p {
         border-left: 4px solid $color-blue-two;
     }
 }
+
+button{
+    cursor: pointer;
+}
+
+button,input{
+    outline: none;
+}

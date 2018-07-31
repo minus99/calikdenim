@@ -3,6 +3,73 @@
     min-height: calc(100% - 50px);
     display: flex;
     flex-direction: column;
+    .approved {
+        min-height: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        .check {
+            width: 44px;
+            height: 44px;
+            background: rgb(43, 99, 234);
+            color: white;
+            line-height: 44px;
+            border-radius: 50%;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 18px;
+                background: white;
+                left: 0;
+                right: -5px;
+                top: 0px;
+                bottom: 0;
+                margin: auto;
+                transform: rotate(45deg);
+                border-radius: 3px;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 8px;
+                background: white;
+                left: -11px;
+                right: 0;
+                top: 6px;
+                bottom: 0;
+                margin: auto;
+                transform: rotate(-45deg);
+                border-radius: 3px;
+            }
+        }
+        .head {
+            color: black;
+            line-height: 24px;
+            letter-spacing: .3px;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .text {
+            margin-bottom: 30px;
+            letter-spacing: .6px;
+            line-height: 18px;
+            font-size: 14px;
+            color: rgb(87, 89, 92);
+        }
+    }
     h1 {
         text-align: center;
         font-size: 22px;
@@ -55,6 +122,64 @@
             &:hover {
                 &:after {
                     width: 4px;
+                }
+            }
+        }
+    }
+    .counter {
+        margin-top: 20px;
+        .selected {
+            height: 50px;
+            width: calc(100% + 60px);
+            margin-left: -30px;
+            padding: 0 20px;
+            border-top: solid 1px rgb(239, 239, 239);
+            border-bottom: solid 1px rgb(239, 239, 239);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 300;
+            color: rgb(87, 89, 92);
+            font-size: 14px;
+            a {
+                text-decoration: none;
+                color: rgb(87, 89, 92);
+            }
+        }
+        .need {
+            padding-top: 40px;
+            .head {
+                font-size: 14px;
+                line-height: 18px;
+                text-align: center;
+                letter-spacing: .6px;
+                color: rgb(54, 58, 62);
+                margin-bottom: 20px;
+            }
+            .input {
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                button {
+                    width: 24px;
+                    height: 24px;
+                    border: solid 1px rgb(236, 236, 236);
+                    background: none;
+                    span {
+                        font-size: 8px;
+                    }
+                }
+                input {
+                    height: 24px;
+                    width: 45px;
+                    background: none;
+                    border: none;
+                    text-align: center;
+                    font-weight: 300;
+                    letter-spacing: .8px;
+                    color: rgb(55, 62, 68);
+                    font-size: 14px;
                 }
             }
         }

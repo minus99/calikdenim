@@ -76,25 +76,39 @@ $(document).ready(function () {
         return false;
     });
 
+
+    /* COUNTER */
+    $(".input button.minus").bind("click", function () {
+        var number = parseInt($(this).parent().find("input").val())
+        if (number > 1) {
+            $(this).parent().find("input").val(number -= 1);
+        }
+    });
+    $(".input button.plus").bind("click", function () {
+        var number = parseInt($(this).parent().find("input").val())
+        $(this).parent().find("input").val(number += 1);
+    });
+
+
+
 });
 
 
 /*  faq  start */
 $(".faq ul li .question").on("click", function (e) {
 
-    if($(this).parent().hasClass("not")){
+    if ($(this).parent().hasClass("not")) {
         $(".faq ul li").addClass("not");
         $(".faq ul li").removeClass("active");
-    
+
         $(this).parent().removeClass("not");
         $(this).parent().addClass("active");
-    }
-    else{
+    } else {
         $(this).parent().addClass("not");
         $(this).parent().removeClass("active");
     }
 
-    
+
 });
 
 /*  faq end */
@@ -107,12 +121,12 @@ $(".faq ul li .question").on("click", function (e) {
 /*  Select Bar Change  */
 $(".account-area .select2").on("change", function (e) {
     var date = $(this).val();
-    $(".request-box .item").each(function(){
+    $(".request-box .item").each(function () {
 
         console.log(date);
         console.log($(this).attr("itemValue"));
         $(this).addClass("none");
-        if($(this).attr("itemValue") === date){
+        if ($(this).attr("itemValue") === date) {
             $(this).removeClass("none");
         }
     });
