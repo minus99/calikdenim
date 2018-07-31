@@ -1,0 +1,91 @@
+.news {
+    padding: 20px;
+    .show {
+        font-size: 14px;
+        letter-spacing: .8px;
+        color: rgb(87, 89, 92);
+        >span {
+            >span {
+                color: rgb(43, 99, 234);
+                font-size: 13x;
+                margin-left: 6px;
+            }
+        }
+    }
+    .item {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        .img {
+            width: 100%;
+            position: relative;
+            background: url("../img/example2.jpg") center center no-repeat;
+            background-size: cover;
+            &::before {
+                content: "";
+                display: block;
+                padding-top: 50%;
+            }
+        }
+        >h2 {
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 0.5px;
+            margin: 12px 0;
+            font-weight: bold;
+            padding-left: 10px;
+            border-left: 4px solid $color-blue-two;
+        }
+        >p {
+            font-size: 14px;
+            letter-spacing: 0.1px;
+            color: rgb(87, 89, 92);
+            font-weight: 300;
+            line-height: 20px;
+            padding-left: 14px;
+        }
+    }
+}
+
+.news-details {
+    .img {
+        width: 100%;
+        position: relative;
+        background: url("../img/example2.jpg") center center no-repeat;
+        background-size: cover;
+        &::before {
+            content: "";
+            display: block;
+            padding-top: 55%;
+        }
+    }
+    .text-area {
+        padding: 14px 20px;
+        h2 {
+            font-size: 20px;
+            letter-spacing: .5px;
+            line-height: 24px;
+            margin: 0;
+        }
+        >span {
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: .1px;
+            color: rgb(87, 89, 92);
+            font-weight: 300;
+            margin-top: 10px;
+            display: block;
+        }
+        >p {
+            letter-spacing: .6px;
+            line-height: 20px;
+            color: rgb(54, 58, 62);
+            font-size: 14px;
+            font-weight: 300;
+            margin-top: 25px;
+        }
+        a.big-button{
+            
+        }
+    }
+}

@@ -84,10 +84,16 @@ p {
     }
 }
 
-button{
+button {
     cursor: pointer;
 }
 
-button,input{
+button,
+input {
     outline: none;
+}
+
+::selection {
+    color: white;
+    background: $color-blue-two;
 }

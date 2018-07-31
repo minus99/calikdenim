@@ -41,3 +41,21 @@
     text-align: center;
     margin: 20px 0;
 }
+
+.big-button {
+    padding: 27px;
+    background: #2b63ea;
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 20px 0;
+    span {
+        padding-left: 10px;
+        border-left: 4px solid white;
+        display: block;
+        line-height: 30px;
+        letter-spacing: .5px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+}
