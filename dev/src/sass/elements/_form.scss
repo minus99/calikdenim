@@ -168,21 +168,33 @@ input {
     padding-left: 0;
 }
 
-.showpass-word.show {
-    .show {
-        display: none;
+.showpass-word {
+    > span{
+        background-repeat: no-repeat !important;
+        background-position: center right !important;
+        background-size: 20px !important;
+        width: 100%;
+        height: 100%;
     }
-    .hide {
-        display: block;
+    &.show {
+        .show {
+            display: none;
+            background-image: url("../img/eye2.svg") !important;
+        }
+        .hide {
+            display: block;
+            background-image: url("../img/eye1.svg") !important;
+        }
     }
-}
-
-.showpass-word.hide {
-    .show {
-        display: block;
-    }
-    .hide {
-        display: none;
+    &.hide {
+        .show {
+            display: block;
+            background-image: url("../img/eye2.svg") !important;
+        }
+        .hide {
+            display: none;
+            background-image: url("../img/eye1.svg") !important;
+        }
     }
 }
 
