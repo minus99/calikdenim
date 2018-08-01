@@ -1,4 +1,4 @@
-.page-up{
+.page-up {
     width: 29px;
     height: 29px;
     background-color: #2b63ea;
@@ -11,10 +11,13 @@
     transition: all ease .2s;
     z-index: 1;
     cursor: pointer;
-    &.active{
+    &.active {
         bottom: 20px;
     }
-    span{
+    &.active2 {
+        bottom: 72px;
+    }
+    span {
         color: white;
         text-align: center;
     }

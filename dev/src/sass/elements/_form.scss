@@ -1,5 +1,4 @@
 form {
-    
     >div {
         position: relative;
         margin-bottom: 20px;
@@ -27,6 +26,8 @@ form {
             position: absolute;
             pointer-events: none;
             top: 17px;
+            left: 0;
+            width: 100%;
             font-weight: 300;
             transition: 0.2s ease all;
         }
@@ -106,7 +107,7 @@ form {
                 width: 17px;
                 height: 17px;
                 background-color: #fff;
-                border: solid 1px rgb(204,204,204);
+                border: solid 1px rgb(204, 204, 204);
                 border-radius: 50%;
                 &:after {
                     content: "";
@@ -125,4 +126,8 @@ form {
             }
         }
     }
+}
+
+input[type='password'] {
+    letter-spacing: 5px !important;
 }

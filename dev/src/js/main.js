@@ -62,9 +62,14 @@ $(document).ready(function () {
         var $this = $(this),
             $head = $('.page-up');
         if ($this.scrollTop() > 250) {
-            $head.addClass('active');
+            if ($(".request").length > 0) {
+                $head.addClass('active2');
+            } else {
+                $head.addClass('active');
+            }
+
         } else {
-            $head.removeClass('active');
+            $head.removeClass('active, active2');
         }
     });
 
@@ -90,6 +95,10 @@ $(document).ready(function () {
     });
 
 
+    $(".items-details .see-all").bind("click", function () {
+        $(this).parent(".text").find("p").css("display", "block");
+        $(this).css("display", "none");
+    });
 
 });
 
@@ -114,7 +123,10 @@ $(".faq ul li .question").on("click", function (e) {
 /*  faq end */
 
 
-
+/* Show Password*/
+$(".showpass-word").bind("click", function(){;
+    $(this).prev().prop("type","text");
+});
 
 
 
@@ -161,3 +173,7 @@ $(window).on('load', function () {
         barload();
     }
 })
+
+
+
+
