@@ -62,7 +62,7 @@ $(document).ready(function () {
         var $this = $(this),
             $head = $('.page-up');
         if ($this.scrollTop() > 250) {
-            if ($(".request").length > 0) {
+            if ($(".items-details .request").length > 0) {
                 $head.addClass('active2');
             } else {
                 $head.addClass('active');
@@ -109,7 +109,6 @@ $(".faq ul li .question").on("click", function (e) {
     if ($(this).parent().hasClass("not")) {
         $(".faq ul li").addClass("not");
         $(".faq ul li").removeClass("active");
-
         $(this).parent().removeClass("not");
         $(this).parent().addClass("active");
     } else {
@@ -124,8 +123,15 @@ $(".faq ul li .question").on("click", function (e) {
 
 
 /* Show Password*/
-$(".showpass-word").bind("click", function(){;
-    $(this).prev().prop("type","text");
+$(".showpass-word").bind("click", function(){
+    if($(this).hasClass("show")){
+        $(this).prev().prop("type","text");
+        $(this).removeClass("show").addClass("hide");
+    }
+    else{
+        $(this).prev().prop("type","password");
+        $(this).removeClass("hide").addClass("show");
+    }
 });
 
 
@@ -134,8 +140,6 @@ $(".showpass-word").bind("click", function(){;
 $(".account-area .select2").on("change", function (e) {
     var date = $(this).val();
     $(".request-box .item").each(function () {
-
-        console.log(date);
         console.log($(this).attr("itemValue"));
         $(this).addClass("none");
         if ($(this).attr("itemValue") === date) {
@@ -145,13 +149,12 @@ $(".account-area .select2").on("change", function (e) {
 });
 
 
-/*  Select Bar Change  */
+/*  Select Bar Change Start */
 $(".select-bar .select2").on("change", function (e) {
     $(".select-bar .bars").removeClass("active");
     $(".select-bar .bars .color").css("width", "0");
     changeSelect($(this).val());
 });
-
 function changeSelect(e) {
     $(".select-bar .bars").each(function () {
         if ($(this).attr("optionvalue") === e) {
@@ -160,7 +163,6 @@ function changeSelect(e) {
         }
     });
 }
-
 function barload() {
     $(".bars.active .bar").each(function () {
         $(this).find(".color").animate({
@@ -172,8 +174,5 @@ $(window).on('load', function () {
     if ($(".bars.active .bar").length > 0) {
         barload();
     }
-})
-
-
-
-
+});
+/*  Select Bar Change End */

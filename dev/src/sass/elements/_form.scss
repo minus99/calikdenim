@@ -7,9 +7,40 @@ form {
             outline: none;
             border: none;
         }
+        input {
+            padding-right: 20px;
+        }
         input:focus~.floating-label,
-        input:not(:focus):valid~.floating-label {
+        input:not(:focus):not([value=""])~.floating-label {
             top: -4px; //opacity: 1;
+        }
+        input:not(:focus):not([value=""]):valid {
+            border-bottom: 1px solid rgb(159, 209, 0);
+            background-image: url("../img/correct.svg");
+            background-repeat: no-repeat;
+            background-position: center right;
+            background-size: 16px;
+        }
+        input:not(:focus).correct {
+            border-bottom: 1px solid rgb(159, 209, 0) !important;
+            background-image: url("../img/correct.svg") !important;
+            background-repeat: no-repeat !important;
+            background-position: center right !important;
+            background-size: 16px !important;
+        }
+        input:not(:focus):not([value=""]):invalid {
+            border-bottom: 1px solid rgb(213, 0, 0);
+            background-image: url("../img/error.svg");
+            background-repeat: no-repeat;
+            background-position: center right;
+            background-size: 14px;
+        }
+        input:not(:focus).error {
+            border-bottom: 1px solid rgb(213, 0, 0) !important;
+            background-image: url("../img/error.svg") !important;
+            background-repeat: no-repeat !important;
+            background-position: center right !important;
+            background-size: 14px !important;
         }
         .inputText {
             margin-top: 10px;
@@ -130,4 +161,41 @@ form {
 
 input[type='password'] {
     letter-spacing: 5px !important;
+}
+
+input {
+    border-radius: 0;
+    padding-left: 0;
+}
+
+.showpass-word.show {
+    .show {
+        display: none;
+    }
+    .hide {
+        display: block;
+    }
+}
+
+.showpass-word.hide {
+    .show {
+        display: block;
+    }
+    .hide {
+        display: none;
+    }
+}
+
+.showpass-word {
+    display: none;
+    position: absolute;
+    width: 20px;
+    background: white;
+    height: 40px;
+    bottom: 1px;
+    right: 0;
+}
+
+input:not([value=""])~.showpass-word {
+    display: block;
 }

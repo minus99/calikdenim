@@ -34,12 +34,15 @@
             <div class="login">
                 <form>
                     <div>
-                        <input type="email" name="emaila" class="inputText" value="" autocomplete="off" required>
+                        <input type="email" name="emaila" class="inputText" autocomplete="off" value="" onkeyup="this.setAttribute('value', this.value);" required>
                         <span class="floating-label">E-Mail</span>
                     </div>
                     <div>
-                        <input type="password" name="password" class="inputText" value="" autocomplete="off" required>
-                        <span class="showpass-word">asdsad</span>
+                        <input type="password" name="password" class="inputText" value="" onkeyup="this.setAttribute('value', this.value);" autocomplete="off" required>
+                        <span class="showpass-word show">
+                            <span class="show">a</span>
+                            <span class="hide">b</span>
+                        </span>
                         <span class="floating-label">Password</span>
                     </div>
                 </form>
@@ -52,27 +55,27 @@
         <div class="request-area" style="display: none;">
             <form>
                 <div>
-                    <input type="text" name="name" class="inputText" autocomplete="off" required>
+                    <input type="text" name="name" class="inputText" autocomplete="off" value="" onkeyup="this.setAttribute('value', this.value);" required>
                     <span class="floating-label">Name *</span>
                 </div>
                 <div>
-                    <input type="text" name="surname" class="inputText" autocomplete="off" required>
+                    <input type="text" name="surname" class="inputText error" autocomplete="off" value="" onkeyup="this.setAttribute('value', this.value);" required>
                     <span class="floating-label">Surname *</span>
                 </div>
                 <div>
-                    <input type="text" name="company" class="inputText" autocomplete="off" required>
+                    <input type="text" name="company" class="inputText" autocomplete="off" value="" onkeyup="this.setAttribute('value', this.value);" required>
                     <span class="floating-label">Company *</span>
                 </div>
                 <div>
-                    <input type="text" name="position" class="inputText" autocomplete="off" required>
+                    <input type="text" name="position" class="inputText correct" autocomplete="off" value="" onkeyup="this.setAttribute('value', this.value);" required>
                     <span class="floating-label">Positon</span>
                 </div>
                 <div>
-                    <input type="email" name="emailb" class="inputText" autocomplete="off" required>
+                    <input type="email" name="emailb" class="inputText" autocomplete="off" value="" onkeyup="this.setAttribute('value', this.value);" required>
                     <span class="floating-label">E-Mail *</span>
                 </div>
                 <div>
-                    <input type="number" name="mobile" class="inputText" autocomplete="off" required>
+                    <input type="number" name="mobile" class="inputText" autocomplete="off" value="" onkeyup="this.setAttribute('value', this.value);" required>
                     <span class="floating-label">Mobile</span>
                 </div>
                 <div class="accept-radio">
