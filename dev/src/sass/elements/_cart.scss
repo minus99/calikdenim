@@ -1,3 +1,11 @@
+.carts {
+    @media (min-width: 1100px) {
+        display: flex;
+        max-width: 1120px;
+        margin: 0 auto;
+    }
+}
+
 .cart-one {
     width: 100%;
     background: url("../img/example2.jpg") center center no-repeat;
@@ -44,6 +52,9 @@
     background-size: cover;
     position: relative;
     margin-bottom: 20px;
+    @media (min-width: 1100px) {
+        margin: 20px 10px;
+    }
     &::before {
         content: "";
         display: block;
@@ -64,6 +75,7 @@
             border-left: 4px solid #2b63ea;
             font-size: 14px;
             color: white;
+
         }
         .cart-button {
             display: inline-block;
@@ -92,6 +104,9 @@
         content: "";
         display: block;
         padding-top: 100%;
+        @media (min-width: 1100px) {
+            padding-top: 37%;
+        }
     }
     .cart-button {
         display: inline-block;

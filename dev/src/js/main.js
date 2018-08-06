@@ -38,7 +38,14 @@ $(document).ready(function () {
         $(".profile-area > .profile").removeClass("hide");
         $(".profile-area > .search").removeClass("fix");
         $(".search-div").removeClass("active");
-        $("body").removeClass("hidden");
+
+
+
+
+        if (!$(".header > .close-area").hasClass("active")) {
+            $("body").removeClass("hidden");
+        }
+
     });
 
     /* Trends Pop-up */
@@ -53,8 +60,18 @@ $(document).ready(function () {
 
 
     var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 'auto',
-        spaceBetween: 10
+        slidesPerView: 5,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            1100: {
+                slidesPerView: 'auto',
+                spaceBetween: 10,
+            },
+        }
     });
 
 
@@ -123,13 +140,12 @@ $(".faq ul li .question").on("click", function (e) {
 
 
 /* Show Password*/
-$(".showpass-word").bind("click", function(){
-    if($(this).hasClass("show")){
-        $(this).prev().prop("type","text");
+$(".showpass-word").bind("click", function () {
+    if ($(this).hasClass("show")) {
+        $(this).prev().prop("type", "text");
         $(this).removeClass("show").addClass("hide");
-    }
-    else{
-        $(this).prev().prop("type","password");
+    } else {
+        $(this).prev().prop("type", "password");
         $(this).removeClass("hide").addClass("show");
     }
 });
@@ -155,6 +171,7 @@ $(".select-bar .select2").on("change", function (e) {
     $(".select-bar .bars .color").css("width", "0");
     changeSelect($(this).val());
 });
+
 function changeSelect(e) {
     $(".select-bar .bars").each(function () {
         if ($(this).attr("optionvalue") === e) {
@@ -163,6 +180,7 @@ function changeSelect(e) {
         }
     });
 }
+
 function barload() {
     $(".bars.active .bar").each(function () {
         $(this).find(".color").animate({
