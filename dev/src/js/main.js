@@ -86,7 +86,8 @@ $(document).ready(function () {
             }
 
         } else {
-            $head.removeClass('active, active2');
+            $head.removeClass('active2');
+            $head.removeClass('active');
         }
     });
 

@@ -24,6 +24,7 @@ body {
     overflow-x: hidden;
 }
 
+
 .container {
     min-height: 100%;
     .header {
@@ -45,8 +46,13 @@ body {
                 height: 0;
                 position: absolute;
                 left: -50%;
-                bottom: 0;
+                bottom: -1px;
                 border-bottom: solid 1px #efefef;
+            }
+        }
+        &.splash{
+            &::before {
+                border-bottom: solid 0px #efefef;
             }
         }
         .back-area {
