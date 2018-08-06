@@ -191,6 +191,7 @@ body {
             color: black;
             align-items: center;
             overflow: hidden;
+            position: relative;
             >a {
                 line-height: 54px;
                 padding: 0 10px;
@@ -201,7 +202,7 @@ body {
                 position: relative;
                 opacity: 1;
                 @media (min-width: 1100px) {
-                    font-size: 17px;
+                    font-size: 18px;
                     padding: 0 13px;
                 }
                 &.search {
@@ -215,8 +216,10 @@ body {
                 &.fix {
                     position: fixed;
                     top: 0;
+                    right: 11px;
                     @media (min-width: 1100px) {
                         top: 14px;
+                        right: unset;
                     }
                 }
             }
