@@ -1,14 +1,24 @@
 .starred-box {
     overflow: hidden;
+    max-width: 1140px;
+    margin: 0 auto;
+    @media (min-width: 1100px) {
+        padding: 0 20px;
+    }
     .in {
-        margin-right: -5px;
-        margin-left: -5px;
+        margin-right: -10px;
+        margin-left: -10px;
+        display: flex;
+        flex-wrap: wrap;
         .item {
-            padding-right: 5px;
-            padding-left: 5px;
+            padding-right: 10px;
+            padding-left: 10px;
             width: 50%;
             float: left;
             margin-bottom: 10px;
+            @media (min-width: 1100px) {
+                margin-bottom: 23px;
+            }
             .img {
                 width: 100%;
                 position: relative;
@@ -29,10 +39,18 @@
                     right: 0;
                     text-decoration: none;
                     text-align: center;
+                    @media (min-width: 1100px) {
+                        width: 41px;
+                        height: 41px;
+                    }
                     span {
                         text-align: center;
                         line-height: 30px;
                         font-size: 12px;
+                        @media (min-width: 1100px) {
+                            font-size: 18px;
+                            line-height: 41px;
+                        }
                     }
                 }
             }
@@ -43,6 +61,10 @@
                 font-weight: 300;
                 text-align: center;
                 margin: 10px;
+                @media (min-width: 1100px) {
+                    font-size: 16px;
+                    padding: 10px 0;
+                }
             }
         }
     }

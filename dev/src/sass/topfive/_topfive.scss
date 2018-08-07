@@ -1,15 +1,17 @@
 .top-five {
     padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1160px;
     .top-img {
         padding: 30px 0;
         justify-content: center;
         display: flex;
-        @media (min-width: 700px) {
+        @media (min-width: 1100px) {
             padding: 70px 0 30px;
         }
     }
-    > p {
-        @media (min-width: 700px) {
+    >p {
+        @media (min-width: 1100px) {
             max-width: 600px;
             margin: 0 auto 41px;
             text-align: center;
@@ -22,69 +24,87 @@
         margin: 10px auto 50px;
         max-width: 700px;
     }
-    .trends {
-        margin-bottom: 45px;
-        .trend-image {
-            background: url("../img/example2.jpg") center center no-repeat;
-            background-size: cover;
-            position: relative;
-            width: 100%;
-            margin-top: 15px;
-            &::before {
-                content: "";
-                display: block;
-                padding-top: 50%;
-            }
-            span {
-                width: 48px;
-                height: 48px;
-                background: black;
-                position: absolute;
-                left: 0;
-                top: -15px;
-                color: white;
-                line-height: 48px;
-                font-size: 20px;
-                text-align: center;
-                letter-spacing: .5px;
-            }
+    .trend {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 1100px) {
+            flex-direction: unset;
+            flex-wrap: wrap;
         }
-        .trend-text {
-            padding-left: 12px;
-            h2 {
-                font-size: 20px;
-                line-height: 24px;
-                letter-spacing: 0.5px;
+        .trends {
+            margin-bottom: 45px;
+            @media (min-width: 1100px) {
+                width: calc(33.33% - 20px);
+                margin-right: 10px;
+                margin-left: 10px;
+                margin-bottom: 65px;
+            }
+            .trend-image {
+                background: url("../img/example2.jpg") center center no-repeat;
+                background-size: cover;
                 position: relative;
-                margin-bottom: 10px;
-                &:before {
-                    position: absolute;
-                    left: -12px;
-                    width: 4px;
+                width: 100%;
+                margin-top: 15px;
+                &::before {
                     content: "";
-                    height: 70%;
-                    background: #2b63ea;
-                    top: 0;
-                    bottom: 0;
-                    margin: auto;
+                    display: block;
+                    padding-top: 50%;
+                }
+                span {
+                    width: 48px;
+                    height: 48px;
+                    background: black;
+                    position: absolute;
+                    left: 0;
+                    top: -15px;
+                    color: white;
+                    line-height: 48px;
+                    font-size: 20px;
+                    text-align: center;
+                    letter-spacing: .5px;
                 }
             }
-            p {
-                font-size: 14px;
-                letter-spacing: .1px;
-                font-weight: 300;
-                margin-bottom: 30px;
+            .trend-text {
+                padding-left: 12px;
+                h2 {
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: 0.5px;
+                    position: relative;
+                    margin-bottom: 10px;
+                    &:before {
+                        position: absolute;
+                        left: -12px;
+                        width: 4px;
+                        content: "";
+                        height: 70%;
+                        background: #2b63ea;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                    }
+                }
+                p {
+                    font-size: 14px;
+                    letter-spacing: .1px;
+                    font-weight: 300;
+                    margin-bottom: 30px;
+                }
             }
-        }
-        a.view-more {
-            padding-left: 12px;
-            font-size: 14px;
-            color: rgb(87, 89, 92);
-            font-weight: 300;
-            text-decoration: none;
-            span {
-                color: $color-blue-two;
-                font-size: 10px;
+            a.view-more {
+                padding-left: 12px;
+                font-size: 14px;
+                color: rgb(87, 89, 92);
+                font-weight: 300;
+                text-decoration: none;
+                
+                span {
+                    color: $color-blue-two;
+                    font-size: 10px;
+                    @media (min-width: 1100px) {
+                        font-size: 12px;
+                    }
+                }
             }
         }
     }

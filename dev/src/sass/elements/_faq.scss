@@ -1,5 +1,8 @@
 .faq {
     padding: 0 20px;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
     a.see-all {
         font-size: 14px;
         display: block;
@@ -10,9 +13,12 @@
         float: left;
         width: 100%;
         color: rgb(87, 89, 92);
-        span{
+        span {
             color: $color-blue-two;
             font-size: 10px;
+            @media (min-width: 1100px) {
+                font-size: 12px;
+            }
         }
     }
     ul {
@@ -22,8 +28,12 @@
         border-top: solid 1px rgb(239, 239, 239);
         li {
             border-bottom: solid 1px rgb(239, 239, 239);
+            width: 100%;
             float: left;
             position: relative;
+            @media (min-width: 1100px) {
+                padding: 0 20px;
+            }
             &::before {
                 width: calc(100% + 40px);
                 height: 100%;
@@ -35,6 +45,10 @@
                 transition: all ease .2s;
                 top: 0;
                 z-index: -1;
+                @media (min-width: 1100px) {
+                    width: 100%;
+                    left: 0;
+                }
             }
             span.question {
                 cursor: pointer;
@@ -48,6 +62,11 @@
                 width: 100%;
                 padding-left: 24px;
                 position: relative;
+                @media (min-width: 1100px) {
+                    font-size: 16px;
+                    padding: 18px 0;
+                    padding-left: 30px;
+                }
                 &:before {
                     transition: all ease .2s;
                     width: 14px;
@@ -60,6 +79,9 @@
                     margin: auto;
                     top: 0;
                     bottom: 0;
+                    @media (min-width: 1100px) {
+                        width: 16px;
+                    }
                 }
                 &:after {
                     transition: all ease .2s;
@@ -74,6 +96,9 @@
                     margin: auto;
                     top: 0;
                     bottom: 0;
+                    @media (min-width: 1100px) {
+                        width: 16px;
+                    }
                 }
                 >span {
                     margin-right: 10px;
@@ -107,6 +132,10 @@
                 font-weight: 300;
                 color: rgb(87, 89, 92);
                 transition: all ease .2s;
+                @media (min-width: 1100px) {
+                    padding-left: 30px;
+                    font-size: 16px;
+                }
             }
             &.active {
                 &:before {
@@ -116,6 +145,9 @@
                     opacity: 1;
                     height: auto;
                     padding-bottom: 18px;
+                    @media (min-width: 1100px) {
+                        padding-bottom: 48px;
+                    }
                 }
                 span.question {
                     &:after {

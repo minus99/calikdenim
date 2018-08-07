@@ -1,7 +1,12 @@
 .request-box {
     border-top: solid 1px rgb(239, 239, 239);
+    max-width: 1100px;
+    margin: 0 auto;
+    @media (min-width: 1100px) {
+        margin: 15px auto;
+    }
     .item {
-        &.none{
+        &.none {
             display: none;
         }
         border-bottom: solid 1px rgb(239, 239, 239);
@@ -9,38 +14,57 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .detail{
+        @media (min-width: 1100px) {
+            padding: 25px 0 25px 25px;
+        }
+        .detail {
             display: flex;
             align-items: center;
-            .img{
+            .img {
                 width: 80px;
                 background: url("../img/example2.jpg") center center no-repeat;
                 background-size: cover;
                 position: relative;
                 cursor: pointer;
+                @media (min-width: 1100px) {
+                    width: 100px;
+                }
                 &::before {
                     content: "";
                     display: block;
                     padding-top: 63%;
                 }
             }
-            .text{
+            .text {
                 padding: 0 14px;
-                span.name{
+                @media (min-width: 1100px) {
+                    padding: 0 17px;
+                }
+                span.name {
                     font-size: 14px;
                     display: block;
                     font-weight: bold;
+                    @media (min-width: 1100px) {
+                        font-size: 16px;
+                    }
                 }
-                span.cat{
+                span.cat {
                     font-size: 14px;
                     display: block;
+                    font-weight: 300;
                     letter-spacing: .5px;
+                    @media (min-width: 1100px) {
+                        font-size: 16px;
+                    }
                 }
             }
         }
-        .date{
+        .date {
             font-size: 14px;
             font-weight: 300;
+            @media (min-width: 1100px) {
+                font-size: 16px;
+            }
         }
     }
 }
