@@ -1,14 +1,28 @@
 .news {
     padding: 20px;
+    max-width: 1140px;
+    margin: 0 auto;
+    @media (min-width: 1100px) {
+        padding: 20px 10px;
+        flex-wrap: wrap;
+        display: flex;
+        position: relative;
+    }
     .show {
         font-size: 14px;
         letter-spacing: .8px;
         cursor: pointer;
         color: rgb(87, 89, 92);
+        font-weight: 300;
+        @media (min-width: 1100px) {
+            position: absolute;
+            right: 20px;
+            top: -37px;
+        }
         >span {
             >span {
                 color: rgb(43, 99, 234);
-                font-size: 13x;
+                font-size: 13px;
                 margin-left: 6px;
             }
         }
@@ -17,6 +31,13 @@
         width: 100%;
         margin-bottom: 10px;
         margin-top: 20px;
+        @media (min-width: 1100px) {
+            margin-right: 10px;
+            margin-left: 10px;
+            max-width: calc(50% - 20px);
+            float: left;
+            flex-grow: 1;
+        }
         .img {
             width: 100%;
             position: relative;
@@ -36,6 +57,11 @@
             font-weight: bold;
             padding-left: 10px;
             border-left: 4px solid $color-blue-two;
+            @media (min-width: 1100px) {
+                font-size: 22px;
+                line-height: 26px;
+                margin: 30px 0 15px;
+            }
         }
         >p {
             font-size: 14px;
@@ -44,11 +70,19 @@
             font-weight: 300;
             line-height: 20px;
             padding-left: 14px;
+            @media (min-width: 1100px) {
+                font-size: 16px;
+            }
         }
     }
 }
 
 .news-details {
+    max-width: 1140px;
+    margin: 0 auto;
+    @media (min-width: 1100px) {
+        padding: 0 20px;
+    }
     .img {
         width: 100%;
         position: relative;
@@ -58,15 +92,26 @@
             content: "";
             display: block;
             padding-top: 55%;
+            @media (min-width: 1100px) {
+                padding-top: 51%;
+            }
         }
     }
     .text-area {
         padding: 14px 20px;
+        @media (min-width: 1100px) {
+            padding: 30px 0;
+        }
         h2 {
             font-size: 20px;
             letter-spacing: .5px;
             line-height: 24px;
             margin: 0;
+            @media (min-width: 1100px) {
+                font-size: 22px;
+                line-height: 26px;
+                letter-spacing: .6px;
+            }
         }
         >span {
             font-size: 16px;
@@ -76,6 +121,9 @@
             font-weight: 300;
             margin-top: 10px;
             display: block;
+            @media (min-width: 1100px) {
+                margin-bottom: 30px;
+            }
         }
         >p {
             letter-spacing: .6px;
@@ -84,9 +132,16 @@
             font-size: 14px;
             font-weight: 300;
             margin-top: 25px;
+            @media (min-width: 1100px) {
+                font-size: 16px;
+                line-height: 22px;
+                letter-spacing: .8px;
+            }
         }
-        a.big-button{
-            
+        a.big-button {
+            @media (min-width: 1100px) {
+                margin: 40px 0 0;
+            }
         }
     }
 }
