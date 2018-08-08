@@ -1,15 +1,31 @@
 .washouse {
+    max-width: 1180px;
+    margin: 0 auto;
+    @media (min-width: 1100px) {
+        padding: 0 20px;
+    }
     .items {
         border-top: solid 1px rgb(239, 239, 239);
         margin-right: -5px;
         margin-left: -5px;
         display: flex;
         flex-wrap: wrap;
+        @media (min-width: 1100px) {
+            margin-right: 0px;
+            margin-left: 0px;
+            border-top: solid 0px #efefef;
+        }
         .in {
             padding-right: 5px;
             padding-left: 5px;
             width: 50%;
             float: left;
+            @media (min-width: 1100px) {
+                padding-right: 0px;
+                padding-left: 0px;
+                margin: 0 20px 10px;
+                width: calc(50% - 40px);
+            }
             .item {
                 width: 100%;
                 position: relative;
@@ -32,9 +48,17 @@
                     right: 0;
                     text-decoration: none;
                     text-align: center;
+                    @media (min-width: 1100px) {
+                        width: 40px;
+                        height: 40px;
+                    }
                     span {
                         line-height: 30px;
                         font-size: 14px;
+                        @media (min-width: 1100px) {
+                            line-height: 40px;
+                            font-size: 20px;
+                        }
                     }
                 }
                 &.favorite {
@@ -52,75 +76,115 @@
                 text-align: center;
                 width: 100%;
                 margin: 10px 0 20px;
+                @media (min-width: 1100px) {
+                    font-size: 16px;
+                }
             }
         }
     }
     .see-all {
         margin: 20px 0;
         float: left;
+        @media(min-width: 1100px) {
+            margin: 40px 0;
+        }
     }
     .items-details {
         padding: 0 20px 70px;
         overflow: hidden;
-        .img {
-            width: 100%;
-            position: relative;
-            background: url(../img/pants1.png) center center no-repeat;
-            background-size: cover;
-            float: left;
-            &:before {
-                content: "";
+        @media(min-width: 1100px) {}
+        >div {
+            @media(min-width: 1100px) {}
+        }
+        .left {
+            @media(min-width: 1100px) {
+                width: 525px;
+                float: left;
+                margin-right: 70px;
+            }
+            .img {
+                width: 100%;
+                position: relative;
+                background: url(../img/pants1.png) center center no-repeat;
+                background-size: cover;
+                float: left;
+                &:before {
+                    content: "";
+                    display: block;
+                    padding-top: 123%;
+                }
+            }
+            span.info {
                 display: block;
-                padding-top: 123%;
-            }
-        }
-        span.info {
-            display: block;
-            font-size: 14px;
-            letter-spacing: .6px;
-            line-height: 18px;
-            color: #363a3e;
-            font-weight: 300;
-            float: left;
-            margin: 15px 0;
-            width: 100%;
-        }
-        .text {
-            float: left;
-            margin-top: 30px;
-            h2 {
-                font-size: 20px;
-                line-height: 24px;
-                letter-spacing: .5px;
-            }
-            p {
                 font-size: 14px;
                 letter-spacing: .6px;
                 line-height: 18px;
                 color: #363a3e;
                 font-weight: 300;
-            }
-            .see-all {
-                font-weight: 300;
-                text-align: left;
+                float: left;
+                margin: 15px 0;
+                width: 100%;
+                @media(min-width: 1100px) {
+                    font-size: 16px;
+                    line-height: 22px;
+                    margin: 20px 0;
+                }
             }
         }
-        .request {
-            display: flex;
-            position: fixed;
-            height: 52px;
-            padding: 0 25px;
-            background: black;
-            width: 100%;
-            bottom: 0;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            letter-spacing: 1px;
-            left: 0;
-            z-index: 2;
+        .right {
+            @media(min-width: 1100px) {
+                width: 505px;
+                float: left;
+                max-width: 378px;
+            }
+            .text {
+                float: left;
+                margin-top: 30px;
+                @media(min-width: 1100px) {
+                    margin-top: 50px;
+                }
+                h2 {
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: .5px;
+                }
+                p {
+                    font-size: 14px;
+                    letter-spacing: .6px;
+                    line-height: 18px;
+                    color: #363a3e;
+                    font-weight: 300;
+                }
+                .see-all {
+                    font-weight: 300;
+                    text-align: left;
+                    @media(min-width: 1100px) {
+                        margin: 20px 0 0;
+                    }
+                }
+            }
+            .request {
+                display: flex;
+                position: fixed;
+                height: 52px;
+                padding: 0 25px;
+                background: black;
+                width: 100%;
+                bottom: 0;
+                justify-content: space-between;
+                align-items: center;
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                letter-spacing: 1px;
+                left: 0;
+                z-index: 2;
+                @media(min-width: 1100px) {
+                    position: static;
+                    margin-top: 50px;
+                    float: left;
+                }
+            }
         }
     }
 }

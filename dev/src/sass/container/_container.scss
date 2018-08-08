@@ -18,12 +18,17 @@ body {
             }
         }
     }
+    &.pop-hid {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+    }
 }
 
 body {
     overflow-x: hidden;
 }
-
 
 .container {
     min-height: 100%;
@@ -50,7 +55,7 @@ body {
                 border-bottom: solid 1px #efefef;
             }
         }
-        &.splash{
+        &.splash {
             &::before {
                 border-bottom: solid 0px #efefef;
             }

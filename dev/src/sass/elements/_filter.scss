@@ -3,12 +3,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (min-width: 1100px) {
+        border-bottom: solid 1px #efefef;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 16px 0;
+    }
     .filters {
         cursor: pointer;
         font-size: 14px;
         letter-spacing: .8px;
         color: #57595c;
         width: 33%;
+        font-weight: 300;
         >span {
             color: rgb(43, 99, 234);
             font-size: 13px;
@@ -21,6 +28,7 @@
         color: #57595c;
         width: 33%;
         text-align: center;
+        font-weight: 300;
     }
     .views {
         cursor: pointer;

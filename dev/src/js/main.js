@@ -50,12 +50,12 @@ $(document).ready(function () {
 
     /* Trends Pop-up */
     $(".trends > a.view-more").bind("click", function () {
-        $("body").addClass("hidden");
+        $("body").addClass("pop-hid");
         $(this).next().addClass("active");
     });
-    $(".popup > a.close").bind("click", function () {
-        $("body").removeClass("hidden");
-        $(this).parent().removeClass("active");
+    $(".popup-in > a.close").bind("click", function () {
+        $("body").removeClass("pop-hid");
+        $(this).parent().parent().removeClass("active");
     });
 
 
