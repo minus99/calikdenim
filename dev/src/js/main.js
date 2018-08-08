@@ -75,6 +75,16 @@ $(document).ready(function () {
     });
 
 
+    var swiper = new Swiper('.swiper-container2', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    });
+
+
     $(window).scroll(function () {
         var $this = $(this),
             $head = $('.page-up');
@@ -118,6 +128,10 @@ $(document).ready(function () {
         $(this).css("display", "none");
     });
 
+    $(".collections-details .info > .see-all").bind("click", function () {
+        $(this).parent(".info").find("p").css("display", "block");
+        $(this).css("display", "none");
+    });
 });
 
 
