@@ -16,6 +16,9 @@
     }
     &.active2 {
         bottom: 72px;
+        @media(min-width: 1120px) {
+            bottom: 20px;
+        }
     }
     span {
         color: white;

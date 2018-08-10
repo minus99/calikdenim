@@ -38,15 +38,30 @@ $(document).ready(function () {
         $(".profile-area > .profile").removeClass("hide");
         $(".profile-area > .search").removeClass("fix");
         $(".search-div").removeClass("active");
-
-
-
-
         if (!$(".header > .close-area").hasClass("active")) {
             $("body").removeClass("hidden");
         }
 
     });
+
+
+    $(".filters-top .views > span").bind("click", function () {
+        $(".filters-top .views > span").removeClass('active');
+        $(this).addClass('active');
+
+        $('.washouse .items').removeClass('four two');
+        $('.washouse .items').addClass($(this).attr('name'));
+    });
+
+
+
+     /* Fabric Show-More */
+    $(".tabs .info > .show-more").bind("click", function () {
+        $(this).css('display','none');
+        $(this).parent().find('p').css('display','block');
+    });
+
+
 
     /* Trends Pop-up */
     $(".trends > a.view-more").bind("click", function () {
@@ -83,6 +98,16 @@ $(document).ready(function () {
             clickable: true,
         }
     });
+
+    var swiper = new Swiper('.swiper-container3', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    });
+
 
 
     $(window).scroll(function () {
