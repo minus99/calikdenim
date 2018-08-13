@@ -74,6 +74,16 @@ $(document).ready(function () {
     });
 
 
+
+    /* Trends Page */
+    $(".trends-page .item > .img").bind("click", function () {
+        $(".trends-page .item").removeClass('active');
+        $(this).parent().addClass('active');
+    });
+
+
+
+
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 5,
         spaceBetween: 10,
