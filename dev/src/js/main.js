@@ -68,6 +68,10 @@ $(document).ready(function () {
         $("body").addClass("pop-hid");
         $(this).next().addClass("active");
     });
+    $(".fabrics > .item").bind("click", function () {
+        $("body").addClass("pop-hid");
+        $(this).next().addClass("active");
+    });
     $(".popup-in > a.close").bind("click", function () {
         $("body").removeClass("pop-hid");
         $(this).parent().parent().removeClass("active");
@@ -111,6 +115,16 @@ $(document).ready(function () {
 
     var swiper = new Swiper('.swiper-container3', {
         slidesPerView: 'auto',
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    });
+
+
+    var swiper = new Swiper('.swiper-container4', {
+        slidesPerView: 3,
         spaceBetween: 10,
         navigation: {
             nextEl: '.swiper-button-next',
