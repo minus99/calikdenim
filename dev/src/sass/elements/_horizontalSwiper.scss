@@ -59,7 +59,10 @@
 }
 
 .swiper-container1 {
-    overflow: unset;
+    .swiper-inner{
+        width: 100%;
+        overflow: hidden;
+    }
 }
 
 .swiper-button-next,
@@ -99,29 +102,6 @@
     }
 }
 
-.swiper-container.swiper-container-horizontal:after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: white;
-    position: absolute;
-    top: 0;
-    right: 100%;
-    z-index: 2;
-    right: -100%;
+.swiper-container{
+    overflow: unset;
 }
-
-.swiper-container.swiper-container-horizontal:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: white;
-    position: absolute;
-    top: 0;
-    right: 100%;
-    z-index: 2;
-    right: 100%;
-}
-
-
-

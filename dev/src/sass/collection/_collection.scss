@@ -185,6 +185,10 @@
         .swiper-container2 {
             overflow: unset;
             position: relative;
+            .swiper-inner{
+                width: 100%;
+                overflow: hidden;
+            }
             .swiper-slide {
                 .img {
                     width: 100%;
