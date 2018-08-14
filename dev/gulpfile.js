@@ -37,7 +37,7 @@ var VendorArray = {
 		'node_modules/jquery/dist/jquery.min.js',
 		'node_modules/select2/dist/js/select2.full.min.js',
 		'node_modules/swiper/dist/js/swiper.min.js',
-		
+		'node_modules/nouislider/distribute/nouislider.min.js'
 	]
 };
 

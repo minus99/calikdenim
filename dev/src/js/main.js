@@ -55,10 +55,10 @@ $(document).ready(function () {
 
 
 
-     /* Fabric Show-More */
+    /* Fabric Show-More */
     $(".tabs .info > .show-more").bind("click", function () {
-        $(this).css('display','none');
-        $(this).parent().find('p').css('display','block');
+        $(this).css('display', 'none');
+        $(this).parent().find('p').css('display', 'block');
     });
 
 
@@ -85,6 +85,35 @@ $(document).ready(function () {
         $(this).parent().addClass('active');
     });
 
+
+    /* Filter Open Close */
+    $(".filters-top > .filters").bind("click", function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(".filter-open").removeClass('active');
+            $('body').addClass('hidden');
+        } else {
+            $(this).addClass('active');
+            $(".filter-open").addClass('active');
+            $('body').addClass('hidden');
+        }
+    });
+    $(".filter-row > .back > .left").bind("click", function () {
+        $(".filter-open").removeClass('active');
+        $('body').removeClass('hidden');
+        $(".filters-top > .filters").removeClass('active');
+    });
+
+
+
+
+    /* Filter List Open Close */
+    $(".filter-row > ul > li > span").bind("click", function () {
+        $(".filter-row > ul > li > span").removeClass('active');
+        $(".filter-row > ul > li > .filter-in").removeClass('active');
+        $(this).next().addClass('active');
+        $(this).addClass('active');
+    });
 
 
 
@@ -258,3 +287,16 @@ $(window).on('load', function () {
     }
 });
 /*  Select Bar Change End */
+
+
+/* Range Slider */
+var slider = document.getElementById('range-slider');
+
+noUiSlider.create(slider, {
+    start: [20, 80],
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 100
+    }
+});

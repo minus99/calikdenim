@@ -20,6 +20,12 @@
             color: rgb(43, 99, 234);
             font-size: 13px;
             margin-left: 6px;
+            display: inline-block;
+        }
+        &.active {
+            >span {
+                transform: rotate(180deg);
+            }
         }
     }
     .items-size {
@@ -48,5 +54,252 @@
                 color: rgb(43, 99, 234);
             }
         }
+    }
+}
+
+.filter-open {
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0, .3);
+    height: 100%;
+    z-index: 11;
+    left: 0;
+    display: none;
+    top: 0;
+    @media (min-width: 1100px) {
+        z-index: 1;
+        top: unset;
+    }
+    &.active {
+        display: block;
+    }
+    .filter-container {
+        width: 100%;
+        max-width: 1100px;
+        height: 100%;
+        margin: 0 auto;
+        .filter-row {
+            width: 100%;
+            max-width: 320px;
+            background: white;
+            height: 100%;
+            overflow: auto;
+            padding-bottom: 40px;
+            position: relative;
+            .back {
+                height: 50px;
+                border-bottom: solid 1px #efefef;
+                @media (min-width: 1100px) {
+                    display: none;
+                }
+                .left {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 17px;
+                    width: calc(100% - 116px);
+                    font-size: 14px;
+                    >span {
+                        font-size: 16px;
+                        margin-right: 8px;
+                    }
+                }
+            }
+            >ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                >li {
+                    >span {
+                        border-bottom: solid 1px #efefef;
+                        padding: 17px 20px;
+                        display: block;
+                        font-size: 14px;
+                        letter-spacing: .8px;
+                        color: #57595c;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        font-weight: 300;
+                        transition: all ease .2s;
+                        border-left: solid 0px #2b63ea;
+                        .selecteds {
+                            margin-left: auto;
+                            margin-right: 10px;
+                            color: rgba(0, 0, 0, .6);
+                            font-size: 13px;
+                            text-align: right;
+                            line-height: 18px;
+                        }
+                        >span {
+                            color: #c2c2c3;
+                            transition: all ease .2s;
+                        }
+                        &:hover,
+                        &.active {
+                            border-left: solid 4px #2b63ea;
+                            padding-left: 16px;
+                            color: #2b63ea;
+                            >span {
+                                color: #2b63ea;
+                            }
+                        }
+                        &.active {
+                            .selecteds {
+                                display: none;
+                            }
+                        }
+                    }
+                    .filter-in {
+                        display: none;
+                        border-bottom: solid 1px #efefef;
+                        &.active {
+                            display: block;
+                        }
+                        >ul {
+                            padding: 0;
+                            margin: 0;
+                            list-style-type: none;
+                            padding-bottom: 15px;
+                            padding-top: 10px;
+                            >li {
+                                position: relative;
+                                >label {
+                                    display: block;
+                                    height: 42px;
+                                    display: flex;
+                                    align-self: center;
+                                    justify-content: space-between;
+                                    font-size: 13px;
+                                    letter-spacing: .7px;
+                                    color: #57595c;
+                                    align-items: center;
+                                    font-weight: 300;
+                                    padding: 0 20px 0 38px;
+                                    cursor: pointer;
+                                    >span {
+                                        display: none;
+                                        font-size: 16px;
+                                        color: #2b63ea;
+                                    }
+                                }
+                                >input {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    opacity: 0;
+                                    z-index: -1;
+                                    &:checked {
+                                        &+label {
+                                            &>span {
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .only-show {
+                position: relative;
+                margin-bottom: 30px;
+                float: left;
+                width: 100%;
+                input {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    opacity: 0;
+                    z-index: -1;
+                    &:checked {
+                        &+label {
+                            &>span {
+                                color: black;
+                            }
+                        }
+                    }
+                }
+                label {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 20px 17px 20px 20px;
+                    color: black;
+                    letter-spacing: .5px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    >span {
+                        font-size: 12px;
+                        color: rgba(0, 0, 0, .0);
+                        border: solid 1px #ececec;
+                        padding: 4px;
+                    }
+                }
+            }
+            .clearAll {
+                position: absolute;
+                top: 0;
+                display: inline-block;
+                right: 17px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                letter-spacing: .8px;
+                line-height: 49px;
+                color: black;
+                text-decoration: none;
+                @media (min-width: 1100px) {
+                    right: unset;
+                    margin: 30px 0;
+                    position: static;
+                    width: 100%;
+                    float: left;
+                }
+                >span {
+                    font-size: 14px;
+                    color: #2b63ea;
+                    margin-left: 7px;
+                    margin-top: -4px;
+                }
+            }
+            .view-items {
+                display: block;
+                font-size: 16px;
+                letter-spacing: 1px;
+                color: black;
+                border: solid 1px black;
+                width: calc(100% - 80px);
+                text-align: center;
+                text-decoration: none;
+                margin: 0 auto;
+                overflow: hidden;
+                padding: 14px 0;
+                background: white;
+                transition: all ease .2s;
+                &:hover {
+                    color: white;
+                    background: black;
+                }
+            }
+        }
+    }
+}
+
+.range-slider-box {
+    padding: 20px 20px 50px 20px;
+    >p {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0 0 30px 0;
+        letter-spacing: .5px;
     }
 }
