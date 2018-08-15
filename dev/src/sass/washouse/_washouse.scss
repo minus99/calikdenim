@@ -375,13 +375,18 @@
                             transition: all ease .1s;
                         }
                         span.green{
-                            display: block;
                             width: 40px;
                             height: 100%;
                             background: #9df100;
                             position: absolute;
                             right: 0;
                             top: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            img{
+                               width: 19px;
+                            }
                         }
                         @media(min-width: 1100px) {
                             font-size: 14px;
