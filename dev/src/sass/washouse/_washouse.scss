@@ -207,6 +207,26 @@
             background: #efefef;
             width: 100%;
             float: left;
+            width: calc(100% + 40px);
+            float: left;
+            margin-left: -20px;
+            @media(min-width: 1100px) {
+                margin-left: unset;
+                width: 100%;
+            }
+            .number {
+                font-size: 15px;
+                text-align: center;
+                line-height: 30px;
+                margin-top: 30px;
+                span {
+                    font-size: 26px;
+                    line-height: 30px;
+                    letter-spacing: 1px;
+                    display: block;
+                    font-weight: bold;
+                }
+            }
             &.nonebg {
                 background: none;
             }
@@ -259,11 +279,15 @@
             h1 {
                 font-family: 'Playfair Display', serif;
                 text-align: center;
-                font-size: 28px;
+                font-size: 22px;
                 letter-spacing: .38px;
                 padding: 0 30px;
-                margin: 0;
                 font-weight: 500;
+                margin: 18px 0;
+                @media(min-width: 1100px) {
+                    font-size: 28px;
+                    margin: 0;
+                }
             }
         }
         .fabric-select {
@@ -339,13 +363,14 @@
                     background: none;
                     border-bottom: none;
                 }
-                a.head {
+                .head {
                     text-align: center;
                     width: 100%;
                     letter-spacing: .9px;
                     font-weight: 300;
                     line-height: 50px;
                     text-decoration: none;
+                    cursor: pointer;
                     color: black;
                     &.active {
                         border-bottom: solid 2px black;
@@ -353,6 +378,9 @@
                 }
             }
             >.in {
+                &.none {
+                    display: none;
+                }
                 width: 100%;
                 background: #f8f8f8;
                 padding: 20px;
@@ -423,6 +451,53 @@
                             span.used {
                                 opacity: 1;
                             }
+                        }
+                    }
+                }
+                .item2 {
+                    float: left;
+                    width: 100%;
+                    margin-bottom: 20px;
+                    .img {
+                        position: relative;
+                        background-size: cover;
+                        background-position: center center;
+                        
+                        &:before {
+                            padding-top: 100%;
+                            content: '';
+                            display: block;
+                        }
+                    }
+                    .text {
+                        padding: 15px 0;
+                        font-size: 12px;
+                        .used {
+                            font-weight: bold;
+                            float: left;
+                            color: black;
+                            display: none;
+                        }
+                        span {
+                            float: right;
+                            color: rgb(87, 89, 92);
+                            letter-spacing: .3px;
+                        }
+                    }
+                    &.active{
+                        .img{
+                            &:after{
+                                content: '';
+                                width: calc(100% + 10px);
+                                height: calc(100% + 10px);
+                                left: -6px;
+                                top: -6px;
+                                position: absolute;
+                                border: solid 1px black;
+                            }
+                        }
+                        .used{
+                            display: block;
                         }
                     }
                 }
@@ -600,11 +675,11 @@
 
 .swiper-container4 {
     position: relative;
-    width: calc(100% - 80px);
-    margin-left: 40px;
-    margin-top: 30px;
     @media (min-width: 1100px) {
         padding: 0px;
+        margin-top: 30px;
+        width: calc(100% - 80px);
+        margin-left: 40px;
     }
     .swiper-inner {
         width: 100%;

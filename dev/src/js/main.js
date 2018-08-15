@@ -117,6 +117,19 @@ $(document).ready(function () {
 
 
 
+
+    /* Fabric Archive Colletion Tabs */
+    $(".tabs .heads span").bind("click", function () {
+        $(".tabs .heads span").removeClass("active");
+        $(this).addClass("active");
+
+        $(".tabs > .in").addClass('none');
+        $(".tabs > .in").eq($(this).index()).removeClass('none');
+    });
+
+
+
+
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 5,
         spaceBetween: 10,
