@@ -265,6 +265,17 @@ $(".select-bar .select2").on("change", function (e) {
     changeSelect($(this).val());
 });
 
+
+/*  Fabric Selected */
+$(".fabric-select > .item").on("click", function (e) {
+    $(".fabric-select > .item").removeClass("active");
+    $(this).addClass("active");
+    $(".items-details .left .img").attr("style",$(this).find(".img").attr("style"));
+});
+
+
+
+
 function changeSelect(e) {
     $(".select-bar .bars").each(function () {
         if ($(this).attr("optionvalue") === e) {
@@ -291,12 +302,13 @@ $(window).on('load', function () {
 
 /* Range Slider */
 var slider = document.getElementById('range-slider');
-
-noUiSlider.create(slider, {
-    start: [20, 80],
-    connect: true,
-    range: {
-        'min': 0,
-        'max': 100
-    }
-});
+if($('#range-slider').length > 0){
+    noUiSlider.create(slider, {
+        start: [20, 80],
+        connect: true,
+        range: {
+            'min': 0,
+            'max': 100
+        }
+    });
+}
