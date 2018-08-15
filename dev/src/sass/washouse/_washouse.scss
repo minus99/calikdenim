@@ -361,7 +361,7 @@
                         transition: all ease .1s;
                     }
                     a {
-                        padding: 0 20px;
+                        padding: 0 55px 0 20px;
                         display: flex;
                         justify-content: space-between;
                         width: 100%;
@@ -373,6 +373,15 @@
                         span.used {
                             opacity: 0;
                             transition: all ease .1s;
+                        }
+                        span.green{
+                            display: block;
+                            width: 40px;
+                            height: 100%;
+                            background: #9df100;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
                         }
                         @media(min-width: 1100px) {
                             font-size: 14px;
