@@ -117,6 +117,15 @@ $(document).ready(function () {
 
 
 
+    /* Washhouse Choose */
+    $(".help > ul > li > span").bind("click", function () {
+        $(".help > ul > li > span").removeClass('active');
+        $(".help > ul > li > .filter-in").removeClass('active');
+        $(this).next().addClass('active');
+        $(this).addClass('active');
+    });
+
+    
 
     /* Fabric Archive Colletion Tabs */
     $(".tabs .heads span").bind("click", function () {
