@@ -125,7 +125,7 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 
-    
+
 
     /* Fabric Archive Colletion Tabs */
     $(".tabs .heads span").bind("click", function () {
@@ -139,7 +139,7 @@ $(document).ready(function () {
 
 
 
-    var swiper = new Swiper('.swiper-container', {
+    var swiper1 = new Swiper('.swiper-container', {
         slidesPerView: 5,
         spaceBetween: 10,
         navigation: {
@@ -155,7 +155,7 @@ $(document).ready(function () {
     });
 
 
-    var swiper = new Swiper('.swiper-container2', {
+    var swiper2 = new Swiper('.swiper-container2', {
         slidesPerView: 1,
         spaceBetween: 10,
         pagination: {
@@ -164,7 +164,7 @@ $(document).ready(function () {
         }
     });
 
-    var swiper = new Swiper('.swiper-container3', {
+    var swiper3 = new Swiper('.swiper-container3', {
         slidesPerView: 'auto',
         spaceBetween: 10,
         navigation: {
@@ -174,15 +174,21 @@ $(document).ready(function () {
     });
 
 
-    var swiper = new Swiper('.swiper-container4', {
+    var swiper4 = new Swiper('.swiper-container4', {
         slidesPerView: 3,
         spaceBetween: 10,
-        loop: true,
+        centeredSlides: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         }
     });
+    $(".swiper-container4 .swiper-slide").bind("click", function () {
+        swiper4.slideTo($(this).index());
+    });
+
+
+
 
 
 
@@ -293,7 +299,7 @@ $(".select-bar .select2").on("change", function (e) {
 $(".fabric-select > .item").on("click", function (e) {
     $(".fabric-select > .item").removeClass("active");
     $(this).addClass("active");
-    $(".items-details .left .img").attr("style",$(this).find(".img").attr("style"));
+    $(".items-details .left .img").attr("style", $(this).find(".img").attr("style"));
 });
 
 
@@ -325,7 +331,7 @@ $(window).on('load', function () {
 
 /* Range Slider */
 var slider = document.getElementById('range-slider');
-if($('#range-slider').length > 0){
+if ($('#range-slider').length > 0) {
     noUiSlider.create(slider, {
         start: [20, 80],
         connect: true,
@@ -335,3 +341,39 @@ if($('#range-slider').length > 0){
         }
     });
 }
+
+
+
+
+
+
+
+// Splash Screen 
+
+$(window).on('load', function () {
+    if ($('.splash-screen').length > 0) {
+        $('.splash-screen').addClass('active');
+        setTimeout(function () {
+            $('.splash-screen').addClass('bordernone');
+            setTimeout(function () {
+                $('.splash-screen').addClass('hide');
+            }, 1500);
+        }, 1500);
+    }
+});
+
+var swiper4 = new Swiper('.swiper-container5', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    onSlideNextStart: function() {
+        alert($(this).html());
+    }
+});
