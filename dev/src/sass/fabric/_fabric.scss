@@ -2,11 +2,15 @@
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     display: flex;
     align-items: flex-end;
     padding: 35px;
     float: left;
+    background-image: url("../img/fabric_0.jpg");
+    @media (min-width: 1100px) {
+        background-image: url("../img/fabric_desktop.jpg");
+    }
     &:after {
         padding-top: 165%;
         content: "";
