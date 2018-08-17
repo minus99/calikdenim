@@ -181,6 +181,12 @@ $(document).ready(function () {
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
+        },
+        on: {
+            slideChangeTransitionEnd: function () {
+                $('.right > .slider-tabs').addClass('none'); 
+                $('.right > .slider-tabs').eq($('.swiper-container4 .swiper-slide.swiper-slide-active').index()).removeClass('none'); 
+            },
         }
     });
     $(".swiper-container4 .swiper-slide").bind("click", function () {
