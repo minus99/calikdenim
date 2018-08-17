@@ -73,6 +73,11 @@
     left: 0;
     height: 100%;
     width: 100%;
+    transition: all ease .3s;
+    &.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
     .swiper-container5 {
         overflow: hidden;
         .swiper-inner {
