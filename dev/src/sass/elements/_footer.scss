@@ -22,9 +22,10 @@
          height: 100%;
          align-items: center;
          li {
-             width: 100%;
+             width: 25%;
              text-align: center;
              border-right: solid 1px gray;
+             display: block;
              &:last-child {
                  border-right: none;
              }

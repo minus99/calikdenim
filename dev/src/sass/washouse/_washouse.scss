@@ -6,8 +6,6 @@
     }
     .items {
         border-top: solid 1px rgb(239, 239, 239);
-        display: flex;
-        flex-wrap: wrap;
         @media (min-width: 1100px) {
             border-top: solid 0px #efefef;
         }
@@ -560,6 +558,7 @@
                 float: left;
                 .cart-two {
                     margin: 0;
+                    
                     .cart-info {
                         left: 30px;
                         bottom: 40px;
