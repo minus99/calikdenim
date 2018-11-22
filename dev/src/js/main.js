@@ -11,7 +11,7 @@ $(document).ready(function () {
 
         $(".logo-area .logo").css("display", "none");
         $(".logo-area .request").css("display", "block");
-    });
+    }); 
 
 
     $(".close-area").bind("click", function () {

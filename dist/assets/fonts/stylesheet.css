@@ -1,22 +1,38 @@
 @font-face {
-    font-family: "Berthold";
-    src: url("BertholdAkzidenzGroteskLight.otf") format("opentype");
+    font-family: 'Berthold';
+    src: url('akzidenzgrotesk/AkzidenzGrotesk-Light.eot'); /* IE9 Compat Modes */
+    src: url('akzidenzgrotesk/AkzidenzGrotesk-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('akzidenzgrotesk/AkzidenzGrotesk-Light.woff2') format('woff2'), /* Super Modern Browsers */
+        url('akzidenzgrotesk/AkzidenzGrotesk-Light.woff') format('woff'), /* Pretty Modern Browsers */
+        url('akzidenzgrotesk/AkzidenzGrotesk-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('akzidenzgrotesk/AkzidenzGrotesk-Light.svg#svgFontName') format('svg'); /* Legacy iOS */
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
-    font-family: "Berthold";
-    src: url("BertholdAkzidenzGroteskMedium.otf") format("opentype");
-    font-weight: medium;
+    font-family: 'Berthold';
+    src: url('akzidenzgrotesk/AkzidenzGrotesk-Bold.eot'); /* IE9 Compat Modes */
+    src: url('akzidenzgrotesk/AkzidenzGrotesk-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('akzidenzgrotesk/AkzidenzGrotesk-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+        url('akzidenzgrotesk/AkzidenzGrotesk-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+        url('akzidenzgrotesk/AkzidenzGrotesk-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('akzidenzgrotesk/AkzidenzGrotesk-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Berthold";
-    src: url("BertholdAkzidenzGroteskRegular.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
+    src: url('akzidenzgrotesk/AkzidenzGrotesk.eot'); /* IE9 Compat Modes */
+    src: url('akzidenzgrotesk/AkzidenzGrotesk.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('akzidenzgrotesk/AkzidenzGrotesk.woff2') format('woff2'), /* Super Modern Browsers */
+        url('akzidenzgrotesk/AkzidenzGrotesk.woff') format('woff'), /* Pretty Modern Browsers */
+        url('akzidenzgrotesk/AkzidenzGrotesk.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('akzidenzgrotesk/AkzidenzGrotesk.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-weight: 400;
+    font-style: normal; 
 }
+
 @font-face {
     font-family: 'icomoon';
     src:  url('iconmoon/icomoon.eot?lr3h6i');
@@ -27,3 +43,6 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+
