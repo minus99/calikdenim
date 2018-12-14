@@ -129,13 +129,11 @@ $(document).ready(function () {
 
     /* Fabric Archive Colletion Tabs */
     $(".tabs .heads span").bind("click", function () {
-
-        var tabIndex = $(".right2 .slider-tabs").eq($(this).parents(".slider-tabs").index() - 2);
-        tabIndex.find(".tabs .heads span").removeClass("active");
+        $(".tabs .heads span").removeClass("active");
         $(this).addClass("active");
-        tabIndex.find(".tabs > .in").addClass('none');
-        tabIndex.find(".tabs > .in").eq($(this).index()).removeClass('none');
 
+        $(".tabs > .in").addClass('none');
+        $(".tabs > .in").eq($(this).index()).removeClass('none');
     });
 
 
