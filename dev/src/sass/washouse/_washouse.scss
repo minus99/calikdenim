@@ -178,6 +178,7 @@
         >.text {
             float: left;
             margin-top: 30px;
+            width: 100%;
             @media(min-width: 1100px) {
                 margin-top: 50px;
             }
@@ -198,6 +199,74 @@
                 text-align: left;
                 @media(min-width: 1100px) {
                     margin: 20px 0 0;
+                }
+            }
+            .table{
+                width: 100%;
+                border-left: solid 1px black;
+                border-top: solid 1px black;
+                border-right: solid 1px black;
+                .row{
+                    display: flex;
+                    border-bottom: solid 1px black;
+                    align-items: center;
+                    .col-head{
+                        font-size: 12px;
+                        color: black;
+                        letter-spacing: 0.8px;
+                        font-weight: bold;
+                        width: 45%;
+                        padding: 15px 20px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        border-right: solid 1px black;
+                    }
+                    .col-text{
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        padding: 15px 20px;
+                        width: 55%;
+                        font-size: 12px;
+                        letter-spacing: 0.8px;
+                    }
+                }
+            }
+            .table-two{
+                width: 100%;
+                margin-top: 50px;
+                .row{
+                    display: flex;
+                    border-bottom: solid 1px white;
+                    border-right: solid 1px #edf2fc;
+                    &.head{
+                        border: none;
+                        .col-head, .col-text{
+                            font-size: 14px;
+                            font-weight: bold;
+                            background: none;
+                        }
+                    }
+                    .col-head{
+                        background: #edf2fc;
+                        font-size: 12px;
+                        color: black;
+                        letter-spacing: 0.8px;
+                        font-weight: bold;
+                        width: 65%;
+                        padding: 15px 20px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .col-text{
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        padding: 15px 20px;
+                        width: 35%;
+                        text-align: center;
+                        border-bottom: solid 1px #edf2fc;
+                        font-size: 12px;
+                        letter-spacing: 0.8px;
+                    }
                 }
             }
         }
